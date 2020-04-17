@@ -1,0 +1,167 @@
+ <html>
+<head>
+
+
+	<style>
+	nav {
+    width: 100%;
+    height: 40px;
+    background-color: green;
+}
+ul{
+overflow:hidden;
+
+
+}	li {
+    display: inline;
+    padding: 32px;
+    line-height: 2;
+}
+
+	li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+li a:hover {
+  background-color: #f1f1f1;
+ padding:12px 0;
+color:black;
+
+
+
+
+}
+	</style>
+
+<style>
+body {
+
+font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+      text-align:center;
+	color:green;
+
+}
+* {
+box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+</style>
+
+
+</head>
+<body>
+<div>
+</div>
+<nav>
+	<ul>
+		<li><a href="ani.html">HOME</a></li>
+		<li><a href="complaint.html">COMPLAINT PAGE</a></li>
+		<li><a href="displaytypewise.html">DISPLAY TYPE-WISE</a></li>
+		<li><a href="placewise.html">DISPLAY PLACE-WISE</a></li>
+		<li><a href="gallery.html">GALLERY OF THE COMPLAINT</a></li>
+	</ul>
+	
+</nav>
+
+
+
+<h1>COMPLAINT PAGE</h1>
+
+<div class="container">
+  <form action="displaytypewise.html" method="get">
+    <label >FULL NAME OF COMPLAINANT</label>
+    <input type="text" id="fname" name="firstname" placeholder="FULL NAME OF COMPLAINANT...">
+
+    <label >CONTACT NUMBER</label>
+    <input type="text" id="contact" name="contact" placeholder="CONTACT NUMBER...">
+
+    <label >PLACE/DISTRICT</label>
+    <select id="country" name="country">
+      <option value="Jalandhar">Jalandhar</option>
+      <option value="Ludhiana">Ludhiana</option>
+      <option value="Amritsar">AMRITSAR</option>
+      <option value="Barnala">Barnala</option>
+      <option value="Bathinda">Bathinda</option>
+      <option value="Hoshiarpur">Hoshiarpur</option>
+      <option value="Patiala">Patiala</option>
+      <option value="Taran Taran">Taran Taran</option>
+      <option value="Shahid Bhagat Singh Nagar">Shahid Bhagat Singh Nagar</option>
+      <option value="Mansa">Mansa</option>
+      <option value="Sangrur">Sangrur</option> 
+    </select>
+    
+    <label >DATE OF HAPPENING/INCIDENT</label>
+    <input type="date" id="date" name="date" placeholder="DATE OF HAPPENING/INCIDENT...">
+<br><br>
+
+	<label>TYPE OF INCIDENT</label><br>	
+
+	<input type="radio" id="water"  name="vehicle" value="water">
+  <label > WATER POLLUTION</label>
+	<input type="radio" id="air" name="vehicle" value="air">
+  <label > AIR POLLUTION</label>
+	<input type="radio" id="others" name="vehicle" value="others">
+  <label > OTHERS</label>
+<br>
+<br
+
+
+    <label>DESCRIPTION</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+	<label>IMAGE/ VIDEO UPLOADED:</label>
+  <input type="file" id="myfile" name="myfile">
+	
+<br>
+<br>
+    <button type="button"  id="entry">SUBMIT</button> 
+  </form>
+</div>
+
+<br>
+<br>
+
+<script src=" script.js"></script> 
+
+
+ 
+
+</body>
+</html>

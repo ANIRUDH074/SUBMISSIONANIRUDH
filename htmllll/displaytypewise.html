@@ -1,0 +1,403 @@
+<html>
+<head>
+	<style>
+	nav {
+    width: 100%;
+    height: 40px;
+    background-color:green;
+}
+ul{
+overflow:hidden;
+
+
+}	li {
+    display: inline;
+    padding: 32px;
+    line-height: 2;
+}
+
+
+.heading{
+      text-align:center;
+	color:green;
+	font-weight:bold;
+
+}
+	li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+li a:hover {
+  background-color: #f1f1f1;
+ padding:12px 0;
+color:black;
+
+
+
+
+}
+	</style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+table,th,td{
+border:2px solid green;
+padding:5px;
+}
+
+th{
+font-size:30px;
+font-weight:700;
+font-family:arial;
+color:#4CAF50;
+}
+
+td
+{
+font-size:25px;
+color:blue;
+font-weight:700;
+font-family:arial;
+}
+</style>
+
+<style>
+
+.panel-info {
+    border-color: #4CAF50;
+}
+
+.panel-info>.panel-heading {
+    color: #31708f;
+    background-color:#f2f2f2;
+    border-color: #4CAF50;
+}
+ .panel-heading {
+    cursor: pointer;
+}
+/* CSS Method for adding Font Awesome Chevron Icons */
+ .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family:'FontAwesome';
+    content:"\f077";
+    float: right;
+    color: inherit;
+}
+.panel-heading.collapsed .accordion-toggle:after {
+    /* symbol for "collapsed" panels */
+    content:"\f078";
+}
+.nav-tabs>li {
+    float: left;
+    margin-bottom: -32px;
+}
+
+</style>
+<script>
+
+   jQuery('.accordion-toggle').click(function(){
+      
+		  var has = jQuery(this);
+		  if(has.hasClass('collapsed')){
+				 jQuery(this).find('i').removeClass('fa-plus');
+				 jQuery(this).find('i').addClass('fa-minus');
+		  }
+		  else{
+			  jQuery(this).find('i').removeClass('fa-minus');
+			  jQuery(this).find('i').addClass('fa-plus');
+		  }
+	})
+</script>
+<script>
+$(document).ready(function () 
+ { 
+  $("#watch-me").click(function()
+  {
+    $("#show-me:hidden").show('slow');
+   $("#show-me-two").hide();
+   $("#show-me-three").hide();
+   });
+   $("#watch-me").click(function()
+  {
+    if($('watch-me').prop('checked')===false)
+   {
+    $('#show-me').hide();
+   }
+  });
+  
+  
+  
+  
+  
+  
+  $("#see-me").click(function()
+  {
+    $("#show-me-two:hidden").show('slow');
+   $("#show-me").hide();
+   $("#show-me-three").hide();
+   });
+   $("#see-me").click(function()
+  {
+    if($('see-me-two').prop('checked')===false)
+   {
+    $('#show-me-two').hide();
+   }
+  });
+  
+  
+  
+  
+  
+  
+  
+  $("#look-me").click(function()
+  {
+    $("#show-me-three:hidden").show('slow');
+   $("#show-me").hide();
+   $("#show-me-two").hide();
+   });
+   $("#look-me").click(function()
+  {
+    if($('see-me-three').prop('checked')===false)
+   {
+    $('#show-me-three').hide();
+   }
+  });
+  
+ });
+
+</script>
+
+</head>
+<body action="displaytypewise.html" onload="init();" >
+
+<nav>
+	<ul>
+		<li><a href="ani.html">HOME</a></li>
+		<li><a href="new.html">COMPLAINT PAGE</a></li>
+		<li><a href="displaytypewise.html">DISPLAY TYPE-WISE</a></li>
+		<li><a href="placewise.html">DISPLAY PLACE-WISE</a></li>
+		<li><a href="gallery.html">GALLERY OF THE COMPLAINT</a></li>
+	</ul>
+	
+</nav>
+
+
+
+<h1 class="heading">DISPLAY TYPE-WISE</h1>
+<br>
+<div class="container">
+<div class=" row">
+<div class="col-sm-12" >
+
+  <div id='show-me'>
+            <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist"  style="color:black;margin-top:10px;">
+                <li role="presentation" class="active" style="color:blue;"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"  style="color:green;">WATER PROBLEMS</a></li>
+                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" style="color:green;">AIR PROBLEMS</a></li>
+                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"style="color:green;">OTHER PROBLEMS</a></li>
+              </ul>
+            
+            <!-- Tab panes -->
+    <div class="tab-content" >
+
+
+              <div role="tabpanel" class="tab-pane active" id="home">
+                <div class="editor-indent" style="  margin-right: 50px;" >
+  
+                       <h3 style="font-weight:bold;">WATER SCARCITY</h3>
+                       <p>India is facing its worst-ever water crisis, with some 600 million people facing acute water shortage. </p>
+                                      
+                        <div class="panel-group" id="accordion">
+                          <div class="panel panel-info">
+                              <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne">
+                               <h4 class="panel-title accordion-toggle"> Filling a complaint about Water Pollution.</h4>
+                              </div>
+
+                              <div id="collapseOne" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                 <p>Approach State Pollution Control Board</p>
+                                 <p>Approaching National Green Tribunal</p>     
+                                 <p>Approaching a District Magistrate or the Police</p>                               
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+
+                            <br> <br>
+                                <table id="display" class="data">
+                                <tr>
+                                <td>NAME</td>
+                                <td>PLACE</td>  
+                                <td>DATE</td>
+                                <td>DESCRIPTION</td>
+                                </tr>
+                                
+                      
+                            </table>
+                              
+                </div>
+              </div>
+               
+
+ 
+      
+              <div role="tabpanel" class="tab-pane" id="profile">
+                  <div class="editor-indent" style="  margin-right: 50px;" >
+  
+                        <h3 style="font-weight:bold;">AIR PROBLEMS</h3>
+                        <p>Worsening air quality is a pan-India problem: 76 percent of Indians live in places that do not meet national air quality standards.</p>
+                        
+                        <div class="panel-group" id="accordion1">
+                            <div class="panel panel-info">
+                              <div class="panel-heading" data-toggle="collapse" data-parent="#accordion1" data-target="#collapseOne1">
+                               <h4 class="panel-title accordion-toggle">  Air Problems in India.</h4>
+                              </div>
+
+                              <div id="collapseOne1" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                   <p>Air pollution is a leading risk factor for death</p>
+                                   <p>The elderly are disproportionately affected</p>     
+                                   <p>he average life expectancy of a child is reduced by at least 2.6 years.</p>  
+                                   <p>Low-income populations are overexposed to causes of air pollution because they do not possess the financial strength to defend themselves against it. </p>                                                                               
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <br><br>
+
+                                <table id="display1" class="data">
+                                <tr>
+                                <td>NAME</td>
+                                <td>PLACE</td>  
+                                <td>DATE</td>
+                                <td>DESCRIPTION</td>
+                                </tr>
+                              
+                            </table>
+                  </div>
+              </div>
+								
+                <div role="tabpanel" class="tab-pane" id="messages">
+          	       <h3 style="font-weight:bold;line-height:2;"> OTHER MAJOR ISSUES </h3>
+          	       <p>Non functioning street lights is a challenge to infrastructural boost to modern India. In Urban area like Delhi, Bombay and other metros, statistics shows, non functioning street lights have resulted in increase of crime rate.</p>
+          	       <p>Traffic signal timings in a road network can not only affect total user travel time and total amount of traffic emissions in the network but also create an inequity problem in terms of the change in travel costs of users traveling between different locations.</p>
+
+                      <table id="display2" class="data">
+                                
+                                <tr>
+                                <td>NAME</td>
+                                <td>PLACE</td>  
+                                <td>DATE</td>
+                                <td>DESCRIPTION</td>
+                                </tr>
+ 
+                            		
+                  		</table>
+          			</div>
+
+    </div>
+        
+
+  </div>
+          
+</div>
+</div>
+</div> 
+
+ <script>
+
+
+
+
+window.onload = init;
+
+var row=1;
+
+function init() {
+       
+        var fname = localStorage.getItem("fname");
+	 var country = localStorage.getItem("country");
+	 var date = localStorage.getItem("date");
+	 var subject = localStorage.getItem("subject");
+        var checkBox=localStorage.getItem("water");
+	 var checkBox1=localStorage.getItem("air");
+	 var checkBox2=localStorage.getItem("others");
+        
+ if (checkBox.checked == true){
+
+var display=document.getElementById("display");
+var newRow=display.insertRow(row);
+var cell1=newRow.insertCell(0);
+var cell2=newRow.insertCell(1);
+var cell3=newRow.insertCell(2);
+var cell4=newRow.insertCell(3);
+
+cell1.innerHTML=fname;
+cell2.innerHTML=country;
+cell3.innerHTML=date;
+cell4.innerHTML=subject;
+
+row++;
+
+return;
+}
+else if (checkBox1.checked == true){
+
+var display1=document.getElementById("display1");
+var newRow=display1.insertRow(row);
+var cell1=newRow.insertCell(0);
+var cell2=newRow.insertCell(1);
+var cell3=newRow.insertCell(2);
+var cell4=newRow.insertCell(3);
+
+cell1.innerHTML=fname;
+cell2.innerHTML=country;
+cell3.innerHTML=date;
+cell4.innerHTML=subject;
+
+row++;
+
+return;
+
+}
+
+else{
+var display2=document.getElementById("display2");
+var newRow=display2.insertRow(row);
+var cell1=newRow.insertCell(0);
+var cell2=newRow.insertCell(1);
+var cell3=newRow.insertCell(2);
+var cell4=newRow.insertCell(3);
+
+cell1.innerHTML=fname;
+cell2.innerHTML=country;
+cell3.innerHTML=date;
+cell4.innerHTML=subject;
+
+row++;
+
+return;
+
+}
+    }
+
+</script>
+  
+
+</body>
+</html>
